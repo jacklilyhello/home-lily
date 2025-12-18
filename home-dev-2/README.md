@@ -47,7 +47,10 @@
 ### 🧭 配置提示
 
 - **壁纸接口**：内置的四个壁纸来源在 `src/components/Background.vue` 的 `changeBg` 方法中维护，按序分别是本地默认壁纸、必应每日图（`https://api.dujin.org/bing/1920.php`）、风景（`https://api.vvhan.com/api/wallpaper/views`）和动漫（`https://api.vvhan.com/api/wallpaper/acg`）。如需替换，修改对应的 URL 即可。
-- **更新日志与项目地址**：设置面板左侧的更新文案在 `src/views/MoreSet/index.vue` 的 `upData` 对象里维护；点击 GitHub 图标跳转的项目地址、版本号等来自根目录 `package.json` 中的 `github`、`version` 等字段。站点主域显示依赖 `.env` 中的 `VITE_SITE_URL`（未配置时默认 `imsyy.top`）。
+- **更新日志与项目信息**：设置面板左侧展示的文字来源各不相同：
+  1. 更新日志文字：修改 `src/views/MoreSet/index.vue` 中 `upData` 的 `new` 与 `fix` 数组即可替换对应的新增/修复条目。
+  2. GitHub 项目地址：同一个文件内点击左下角图标调用 `jumpTo(config.github)`，目标地址取自根目录 `package.json` 的 `github` 字段，按需改成你的仓库链接。
+  3. 版本号与站点域名：版本号显示 `package.json` 的 `version`；页面左侧大字的域名由 `.env` 的 `VITE_SITE_URL` 控制（留空时默认 `imsyy.top`）。
 
 ### ⚙️ 手动部署
 
