@@ -44,6 +44,11 @@
 
   ![步骤2](/screenshots/step2.jpg)
 
+### 🧭 配置提示
+
+- **壁纸接口**：内置的四个壁纸来源在 `src/components/Background.vue` 的 `changeBg` 方法中维护，按序分别是本地默认壁纸、必应每日图（`https://api.dujin.org/bing/1920.php`）、风景（`https://api.vvhan.com/api/wallpaper/views`）和动漫（`https://api.vvhan.com/api/wallpaper/acg`）。如需替换，修改对应的 URL 即可。
+- **更新日志与项目地址**：设置面板左侧的更新文案在 `src/views/MoreSet/index.vue` 的 `upData` 对象里维护；点击 GitHub 图标跳转的项目地址、版本号等来自根目录 `package.json` 中的 `github`、`version` 等字段。站点主域显示依赖 `.env` 中的 `VITE_SITE_URL`（未配置时默认 `imsyy.top`）。
+
 ### ⚙️ 手动部署
 
 - **安装** [node.js](https://nodejs.org/zh-cn/) **环境**
